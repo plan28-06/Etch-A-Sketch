@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13.333px;
+}
+
+body{
+    background-color: rgb(49, 111, 91);
+}
+
+.top{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 30px;
+}
+
+button{
+    padding: 8px 16px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.container{
+    width: 540px;
+    height: 540px;
+    background-color: white;
+    margin-top: 40px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
