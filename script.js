@@ -74,9 +74,25 @@ function white(){
 }
 
 function color1(){
-    colbutton=true;
+colbutton=true;
 }
 
 whitecol.addEventListener('click',white);
 blackcol.addEventListener('click',black);
 col.addEventListener('click',color1);
+
+
+size.addEventListener('mouseover',()=>size.style.backgroundColor='dimgrey')
+size.addEventListener('mouseout',()=>size.style.backgroundColor='white')
+
+reset.addEventListener('mouseover',()=>reset.style.backgroundColor='dimgrey')
+reset.addEventListener('mouseout',()=>reset.style.backgroundColor='white')
+
+blackcol.addEventListener('mouseover',()=>blackcol.style.backgroundColor='dimgrey')
+blackcol.addEventListener('mouseout',()=>blackcol.style.backgroundColor='white')
+
+whitecol.addEventListener('mouseover',()=>whitecol.style.backgroundColor='dimgrey')
+whitecol.addEventListener('mouseout',()=>whitecol.style.backgroundColor='white')
+
+col.addEventListener('mouseover',()=>col.style.backgroundColor='dimgrey')
+col.addEventListener('mouseout',()=>col.style.backgroundColor='white')
