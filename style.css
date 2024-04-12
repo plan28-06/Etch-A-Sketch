@@ -23,6 +23,8 @@ button{
 }
 
 .container{
+    display: flex;
+    flex-direction: row;
     width: 540px;
     height: 540px;
     background-color: white;
@@ -30,4 +32,17 @@ button{
     border: 2px solid black;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.column{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.grid{
+    flex: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
 }
