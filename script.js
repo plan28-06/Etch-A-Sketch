@@ -4,13 +4,11 @@ const reset=document.querySelector('.reset');
 const blackcol=document.querySelector('.black');
 const whitecol=document.querySelector('.white') ;
 const col=document.querySelector('.color')
-let gridsize=0;
 addGrid(16);
 //function to create the grids
 function addGrid(n){
     let i=0;
     let j=0;
-    gridsize=n;
     while (i<n){
         const column=document.createElement('div');
         column.classList.add('column');
@@ -29,11 +27,24 @@ function addGrid(n){
 }
 
 size.addEventListener('click',function (){
-    let m=0;
     let choice=parseInt(prompt('Enter size of the board (make sure it is below 100) '));
+    if (!choice){
+        resetgrid()
+        addGrid(16)
+    }
+    resetgrid();
+    addGrid(choice)
+});
+
+reset.addEventListener('click',function(){
+    resetgrid();
+    addGrid(16)
+})
+
+// To delete the created grid
+function resetgrid(){
     const allcolumn=document.querySelectorAll('.column')
     for (let individualCol of allcolumn){
         container.removeChild(individualCol)
     }
-    addGrid(choice);
-});
+}
