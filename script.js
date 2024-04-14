@@ -6,6 +6,7 @@ const whitecol=document.querySelector('.white') ;
 const col=document.querySelector('.color')
 let gridcolor='black'
 let colbutton=false
+let choice; // variable for storing size
 addGrid(16);
 
 
@@ -43,15 +44,17 @@ function addGrid(n){
 }
 
 size.addEventListener('click',function (){
-    let choice=parseInt(prompt('Enter size of the board (make sure it is below 100) '));
+    choice=parseInt(prompt('Enter size of the board (make sure it is below 100) '));
     resetgrid();
     addGrid(choice)
 });
 
 reset.addEventListener('click',function(){
     resetgrid();
-    
-    addGrid(16)
+    if (choice)
+        addGrid(choice);
+    else
+        addGrid(16);
 })
 
 // To delete the created grid
@@ -81,6 +84,7 @@ whitecol.addEventListener('click',white);
 blackcol.addEventListener('click',black);
 col.addEventListener('click',color1);
 
+// To change color when you hover over a button
 
 size.addEventListener('mouseover',()=>size.style.backgroundColor='dimgrey')
 size.addEventListener('mouseout',()=>size.style.backgroundColor='white')
